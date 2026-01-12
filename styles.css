@@ -7,7 +7,7 @@ body {
 	align-items: center;
 	display: flex;
 	justify-content: center;
-	background: #000;
+	background-image: url(https://i.pinimg.com/736x/0f/4e/39/0f4e39140474c038d9d23a10517bc3f5.jpg);
 }
 
 .content {
@@ -51,7 +51,20 @@ body {
 	background: 
 		radial-gradient(circle at 50% 50%, #ff00dd60 0 70%, #fff0 calc(70% + 1px) 100%), 
 		linear-gradient(90deg, #ff00dd60 0 50%, #fff0 0 100%);
+
+	transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
+
+.letter-d:hover {
+	transform: translateY(-6px);
+
+	box-shadow:
+		0 0 8px rgba(255, 0, 221, 0.45),
+		0 0 16px rgba(255, 0, 221, 0.25);
+
+	filter: brightness(1.1);
+}
+
 
 .letter-e {
 	background: 
@@ -62,6 +75,17 @@ body {
 	background-size: 100% 34%, 100% 34%, 100% 100%, 100% 100%;
 	background-repeat: no-repeat;
 	background-position: 0 50%,0 50%, 0 0, 0 0;
+	transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.letter-e:hover {
+	transform: translateY(-6px);
+
+	box-shadow: 
+		0 0 8px rgba(231, 139, 64, 0.4),
+		0 0 16px rgba(231, 139, 64, 0.25);
+
+	filter: brightness(1.1);
 }
 
 .letter-f {
@@ -91,8 +115,21 @@ body {
 	background: 
 		linear-gradient(90deg, #ff008c60 0 100%),
 		linear-gradient(0deg, #fff0 0 33%, #ff008c60 0 66%, #fff0 0 100%),
-		linear-gradient(90deg, #fff0 0 50%, #ff008c60 0 100%) ;
+		linear-gradient(90deg, #fff0 0 50%, #ff008c60 0 100%);
+	
+	transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
+
+.letter-h:hover {
+	transform: translateY(-6px);
+
+	box-shadow: 
+		0 0 8px rgba(255, 0, 140, 0.45),
+		0 0 16px rgba(255, 0, 140, 0.25);
+
+	filter: brightness(1.1);
+}
+
 
 .letter-i {
 	background: linear-gradient(90deg, #fff0 0 30%, #fdf900cc 0 70%, #fff0 0 100%) ;
@@ -118,8 +155,21 @@ body {
 .letter-l {
 	background: 
 		linear-gradient(0deg, #07da7060 0 30%, #fff0 0 100%),
-		linear-gradient(90deg, #07da7060 0 45%, #fff0 0 100%) ;
+		linear-gradient(90deg, #07da7060 0 45%, #fff0 0 100%);
+
+	transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
+
+.letter-l:hover {
+	transform: translateY(-6px);
+
+	box-shadow: 
+		0 0 8px rgba(7, 218, 112, 0.45),
+		0 0 16px rgba(7, 218, 112, 0.25);
+
+	filter: brightness(1.1);
+}
+
 
 
 .letter-m {
@@ -140,6 +190,18 @@ body {
 		radial-gradient(circle at 50% 50%, #000cb960 0 100%),
 		linear-gradient(-45deg, #000cb960 0 50%, #fff0 0% 100%);
 	border-radius: 100%;
+
+	transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.letter-o:hover {
+	transform: translateY(-6px);
+
+	box-shadow: 
+		0 0 8px rgba(0, 12, 185, 0.45),
+		0 0 16px rgba(0, 12, 185, 0.25);
+
+	filter: brightness(1.1);
 }
 
 
@@ -168,8 +230,21 @@ body {
 		conic-gradient(from 135deg at 50% 50%, #c9dd1873 0 25%, #fff0 0 100%);
 	background-repeat: no-repeat;
 	background-size: 50% 70%, 100% 100%, 100% 100%, 100% 100%;
-	background-position: 100% 0% , 0 0, 0 0, 0 0;
+	background-position: 100% 0%, 0 0, 0 0, 0 0;
+
+	transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
+
+.letter-r:hover {
+	transform: translateY(-6px);
+
+	box-shadow:
+		0 0 8px rgba(201, 221, 24, 0.45),
+		0 0 16px rgba(201, 221, 24, 0.25);
+
+	filter: brightness(1.1);
+}
+
 
 .letter-s::before,
 .letter-s::after {
@@ -211,7 +286,20 @@ body {
 	background:  
 		conic-gradient(from -21deg at 36% 100%, #fff0 0 0.25%, #0066ff80 0.5% 11%, #fff0 11.25% 360deg),
 		conic-gradient(from -21deg at 64% 100%, #fff0 0 0.25%, #0066ff80 0.5% 11%, #fff0 11.25% 360deg);
+
+	transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
+
+.letter-w:hover {
+	transform: translateY(-6px);
+
+	box-shadow:
+		0 0 8px rgba(0, 102, 255, 0.45),
+		0 0 16px rgba(0, 102, 255, 0.25);
+
+	filter: brightness(1.1);
+}
+
 
 .letter-x {
 	background: 
