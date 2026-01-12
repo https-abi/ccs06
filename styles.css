@@ -5,6 +5,7 @@ body {
 	height: 100vh;
 	overflow: hidden;
 	align-items: center;
+	display: flex;
 	justify-content: center;
 	background: #000;
 }
