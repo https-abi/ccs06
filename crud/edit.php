@@ -5,7 +5,7 @@ $id = $_GET["id"];
 if (isset($_POST["submit"])) {
   $name = $_POST['name'];
 
-  $sql = "UPDATE `menus` SET `Name`='$name', `DateUpdated`=NOW() WHERE ID = $id";
+  $sql = "UPDATE `menu` SET `Name`='$name', `DateUpdated`=NOW() WHERE ID = $id";
 
   $result = mysqli_query($conn, $sql);
 
@@ -50,7 +50,7 @@ if (isset($_POST["submit"])) {
     </div>
 
     <?php
-    $sql = "SELECT * FROM `menus` WHERE ID = $id LIMIT 1";
+    $sql = "SELECT * FROM `menu` WHERE ID = $id LIMIT 1";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     ?>

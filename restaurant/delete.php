@@ -1,11 +1,8 @@
 <?php
 include "db_conn.php";
-$id = $_GET["id"];
-$sql = "UPDATE `menus` SET `DateDeleted` = NOW() WHERE ID = $id";
-$result = mysqli_query($conn, $sql);
-
-if ($result) {
-  header("Location: index.php?msg=Data deleted successfully");
-} else {
-  echo "Failed: " . mysqli_error($conn);
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    mysqli_query($conn, "DELETE FROM cart WHERE id = '$id'");
 }
+header("Location: cart.php");
+exit;
