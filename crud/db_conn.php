@@ -1,18 +1,15 @@
 <?php
-include "db_conn.php";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "restaurant";
 
-if (isset($_POST["submit"])) {
-   $name = $_POST['name'];
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-   $sql = "INSERT INTO `menu`(`Name`, `DateCreated`) VALUES ('$name', NOW())";
-
-   $result = mysqli_query($conn, $sql);
-
-   if ($result) {
-      header("Location: index.php?msg=New record created successfully");
-   } else {
-      echo "Failed: " . mysqli_error($conn);
-   }
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
 }
-
+//echo "Connected successfully";
 ?>

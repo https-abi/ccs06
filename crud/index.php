@@ -20,7 +20,7 @@ include "db_conn.php";
 </head>
 
 <body>
-  <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: #00ff5573;">
+  <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: #f5ce32;">
     PHP Complete CRUD Application
   </nav>
 
@@ -34,10 +34,10 @@ include "db_conn.php";
     </div>';
     }
     ?>
-    <a href="add_new.php" class="btn btn-dark mb-3">Add New</a>
+    <a href="add_new_menu.php" class="btn mb-3" style="background-color: #127630; border-color: #127630; color: white;">Add New Menu</a>
 
-    <table class="table table-hover text-center">
-      <thead class="table-dark">
+    <table class="table table-hover text-center table-bordered">
+      <thead style="background-color: #127630; color: white;">
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Name</th>
@@ -60,8 +60,78 @@ include "db_conn.php";
             <td><?php echo $row["DateUpdated"] ?></td>
             <td><?php echo $row["DateDeleted"] ?></td>
             <td>
-              <a href="edit.php?id=<?php echo $row["ID"] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
+              <a href="edit-menu.php?id=<?php echo $row["ID"] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
               <a href="delete.php?id=<?php echo $row["ID"] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
+            </td>
+          </tr>
+        <?php
+        }
+        ?>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="container">
+    <a href="add_new_product.php" class="btn mb-3" style="background-color: #127630; border-color: #127630; color: white;">Add New Product</a>
+
+    <table class="table table-hover text-center table-bordered">
+      <thead style="background-color: #127630; color: white;">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Image Path</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+        $sql = "SELECT * FROM `products`";
+        $result = mysqli_query($conn, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+        ?>
+          <tr>
+            <td><?php echo $row["ID"] ?></td>
+            <td><?php echo $row["Name"] ?></td>
+            <td><?php echo $row["Price"] ?></td>
+            <td><img src="./<?php echo $row['ImagePath']; ?>" width="80" class="img-thumbnail"></td>
+            <td>
+              <a href="edit-product.php?id=<?php echo $row["ID"] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
+              <a href="delete-products.php?id=<?php echo $row["ID"] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
+            </td>
+          </tr>
+        <?php
+        }
+        ?>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="container">
+    <a href="add_new_mp.php" class="btn mb-3" style="background-color: #127630; border-color: #127630; color: white;">Add New Menu-Product Association</a>
+
+    <table class="table table-hover text-center table-bordered">
+      <thead style="background-color: #127630; color: white;">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">MenuID</th>
+          <th scope="col">ProductID</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+        $sql = "SELECT * FROM `menuproducts`";
+        $result = mysqli_query($conn, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+        ?>
+          <tr>
+            <td><?php echo $row["ID"] ?></td>
+            <td><?php echo $row["MenuID"] ?></td>
+            <td><?php echo $row["ProductID"] ?></td>
+            <td>
+              <a href="edit-mp.php?id=<?php echo $row["ID"] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
+              <a href="delete-mp.php?id=<?php echo $row["ID"] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
             </td>
           </tr>
         <?php

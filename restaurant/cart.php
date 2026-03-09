@@ -21,8 +21,8 @@ $result = mysqli_query($conn, $sql);
     <title>Cart – Potato Corner</title>
 </head>
 
-<body>
-    <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: #00ff5573;">
+<body style="background-color: #f8f9fa;">
+    <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: #125f33;">
         🛒 Your Cart
     </nav>
 
